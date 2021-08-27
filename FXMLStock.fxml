@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kiervinc_assignment5.FXMLStockController">
+    
+    <center>
+        <VBox>
+            <padding>
+                <Insets top="0" bottom="0" left="0" right="20" />
+            </padding>
+            
+            <children>
+                <Label text="Select an item from the list" />
+                <ListView fx:id="lstProducts" prefHeight="300.0" prefWidth="150.0" />     
+                <Label fx:id="lblSelected" text="" />
+            </children>
+        </VBox>
+    </center>
+    
+    
+    <right>
+        
+        <VBox>
+            <children>
+                
+                <Label text="Add Products:" />
+                <TextField fx:id="txtID" promptText="Prod. Id, ex: ABC_123" />
+                <TextField fx:id="txtName" promptText="Prod. Name" />
+                <TextField fx:id="txtQty" promptText="Qty on Hand (Number)" />
+                <TextField fx:id="txtRestock" promptText="Restock point (Number)" />
+                <TextField fx:id="txtSalePrice" promptText="Sale Price (Number)" />
+                <TextField fx:id="txtBuyPrice" promptText="Buy Price (Number)" />
+                <Button fx:id="btnAdd" text="Add Product" onAction="#addProd" />
+                
+                <Label text="How Many Item(s) to Buy: " />
+                <TextField fx:id="txtNumBuy" promptText="Number of prod. to buy" /> 
+                <Button fx:id="btnBuy" text="Buy" onAction="#buy" />
+                <Label fx:id="lblFee" text="ReStock Fee" />
+                
+            </children>
+        </VBox>
+        
+    </right>
+    
+</BorderPane>
